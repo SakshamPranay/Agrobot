@@ -12,6 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
   <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+                                                                       <script>
+      function disableClick(){
+        document.onclick=function(event){
+          if (event.button == 2) {
+            alert('Right Click Message');
+            return false;
+          }
+        }
+      }
+    </script>
  <style>
  
     
@@ -301,7 +311,7 @@ height:100vh;
     </ul>
   </div>
 </nav></div>
-  <body><center>
+  <body  onLoad="disableClick()"><center>
   <div id="page-wrap">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#"></a>
